@@ -1,3 +1,5 @@
+'use client';
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { Poppins } from '@next/font/google'
@@ -29,7 +31,7 @@ export default function Home() {
         <div className={inter.className}>
         <Box sx={{width:"100vw", height:"100vh"}}>
           <Navbar/>
-          <Box className={styles.container}>
+          <Box className={styles.container}> 
             <div className={styles.titles}>
               <div className={styles.titleMain}>Ana</div>
               <div className={styles.titleMain}>Loredo</div>

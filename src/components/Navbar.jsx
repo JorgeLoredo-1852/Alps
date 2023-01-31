@@ -1,3 +1,5 @@
+'use client';
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
@@ -34,7 +36,7 @@ const theme = createTheme({
       primary: {
         main: "#CCD9F0",
         darker: '#053e85',
-      },
+      }, 
       neutral: {
         main: '#64748B',
         contrastText: '#fff',
@@ -45,6 +47,12 @@ const theme = createTheme({
     },
   });
 
+  const useStyles = makeStyles(theme => ({
+    customHoverFocus: {
+      "&:hover, &.Mui-focusVisible": { backgroundColor: "#CCD9F0" },
+      "&:hover > *":{color:"#5364A7"}
+    }
+  }));
 
 export default function Navbar() {
     const themeM = useTheme();
@@ -52,7 +60,10 @@ export default function Navbar() {
     const downLg = useMediaQuery(themeM.breakpoints.down('lg'));
     const downMd = useMediaQuery(themeM.breakpoints.down('md'));
     const downSm = useMediaQuery(themeM.breakpoints.down('sm'));
-    const [showDrawer, setShowDrawer] = useState(downMd ? true : false)
+    const [showDrawer, setShowDrawer] = useState(null)
+
+    const classes = useStyles();
+
     
     useEffect(()=>{
         if(downMd){
@@ -135,13 +146,13 @@ export default function Navbar() {
 
 showDrawer ? 
                 <>
-          <Button onClick={toggleDrawer("left", true)}>{"left"}</Button>
+          <Button onClick={toggleDrawer("bottom", true)}>{"bottom"}</Button>
           <Drawer
-            anchor={"left"}
-            open={state["left"]}
-            onClose={toggleDrawer("left", false)}
+            anchor={"bottom"}
+            open={state["bottom"]}
+            onClose={toggleDrawer("bottom", false)}
           >
-            {list("left")}
+            {list("bottom")}
           </Drawer>
                 </>
                 :
@@ -158,13 +169,13 @@ showDrawer ?
                             </svg>
                         </div>
                         <ThemeProvider theme={theme}>
-                        <IconButton color='primary' sx={{marginRight:"1rem"}} aria-label="Delete">
+                        <IconButton className={classes.customHoverFocus} color='primary' sx={{marginRight:"1rem"}} aria-label="Delete">
                                 <Instagram sx={{ fontSize: 45, color:"#CCD9F0" }} />
                             </IconButton>
-                            <IconButton color='primary' sx={{marginRight:"1rem"}}  aria-label="Delete">
+                            <IconButton className={classes.customHoverFocus} color='primary' sx={{marginRight:"1rem"}}  aria-label="Delete">
                                 <Call  sx={{ fontSize: 45, color:"#CCD9F0" }} />
                             </IconButton>
-                            <IconButton color='primary' sx={{marginRight:"1rem"}}   aria-label="Delete">
+                            <IconButton className={classes.customHoverFocus} color='primary' sx={{marginRight:"1rem"}}   aria-label="Delete">
                                 <MailOutline  sx={{ fontSize: 45, color:"#CCD9F0" }} />
                             </IconButton>
                         </ThemeProvider>
