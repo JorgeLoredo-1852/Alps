@@ -7,12 +7,11 @@
 
 .header{
   width: 100%;
-  height: 10vh;
   padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .sections {
@@ -20,8 +19,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   color: #28215C;
+  margin-top: 0.5rem;
 }
 
 .socials {
@@ -35,7 +34,7 @@
 }
 
 .container{
-  height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,4 +54,35 @@
 .titleSecondary{
   font-size: 6rem;
 
+}
+
+.hoverUnderlineAnimation {
+  display: inline-block;
+  position: relative;
+  color: #28215C;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.hoverUnderlineAnimation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #28215C;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderlineAnimation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.blobSocials{
+  position: absolute;
+  width: 10rem;
 }

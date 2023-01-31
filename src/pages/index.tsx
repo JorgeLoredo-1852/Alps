@@ -1,13 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Poppins } from '@next/font/google'
 
 import styles from '@/styles/Home.module.css'
 import {Box, Grid, IconButton} from "@mui/material"
 import {Instagram, WhatsApp, MailOutline} from '@mui/icons-material';
+import Navbar from '@/components/Navbar'
 
+import { ThemeProvider } from '@mui/material'
+import theme from '@/styles/material'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export default function Home() {
   return (
@@ -18,39 +24,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <ThemeProvider theme={theme}>
+      <main className={ styles.main}> 
+        <div className={inter.className}>
         <Box sx={{width:"100vw", height:"100vh"}}>
-          <Box className={styles.header}>
-            <Image
-              src="/images/logo.png" // Route of the image file
-              height={144} // Desired size with correct aspect ratio
-              width={170} // Desired size with correct aspect ratio
-              alt="Analizarte"
-              className={styles.logo}
-            />
-            <div className={styles.sections}>
-              <div style={{marginRight:"4rem"}}>
-                  Seccion
-                </div>
-                <div style={{marginRight:"4rem"}}>
-                  Sobre Mi
-                </div>
-                <div>
-                  Contacto
-                </div>
-            </div>
-            <div className={styles.socials}>
-              <IconButton>
-                <Instagram style={{ fontSize: 60, color:"#28215C" }} />
-              </IconButton>
-              <IconButton>
-                <WhatsApp style={{ fontSize: 60, color:"#28215C" }} />
-              </IconButton>
-              <IconButton>
-                <MailOutline style={{ fontSize: 60, color:"#28215C" }} />
-              </IconButton>
-            </div>
-          </Box>
+          <Navbar/>
           <Box className={styles.container}>
             <div className={styles.titles}>
               <div className={styles.titleMain}>Ana</div>
@@ -75,14 +53,16 @@ export default function Home() {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{height:"100vh"}}>
           <div>Formulario</div>
         </Box>
 
         <Box>
           <div>Bottom</div>
         </Box>
+        </div>
       </main>
+      </ThemeProvider>
     </>
   )
 }
