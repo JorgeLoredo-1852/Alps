@@ -8,13 +8,12 @@
 
 .header{
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  
 }
 
 @media (max-width: 900px) {
@@ -51,6 +50,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.hero{
+  z-index: -10;
 }
 
 .titles{
@@ -133,6 +136,18 @@
   cursor: pointer;
 }
 
+.menuContainer{
+transition: all 0.5s;
+display: block;
+top: 5.5rem;
+}
+
+.hideMenu{
+  transition: all 0.5s;
+  display: none;
+  top: -10rem;
+}
+
 .menuIcon{
   color: #5364A7;
   line-height: 0.8;
@@ -149,8 +164,6 @@
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #b0bccf;
 }
-
-
 
 
 .navigation__checkbox{
