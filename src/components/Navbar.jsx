@@ -65,8 +65,8 @@ export default function Navbar() {
     <Box className={styles.header}>
             <Image
               src="/images/logo.png" // Route of the image file
-              height={downMd ? 75 : 90} // Desired size with correct aspect ratio
-              width={downMd ? 88.5 : 106.25} // Desired size with correct aspect ratio
+              height={downMd ? 62.5 : 90} // Desired size with correct aspect ratio
+              width={downMd ? 73.75 : 106.25} // Desired size with correct aspect ratio
               alt="Analizarte"
               className={styles.logo}
             />
@@ -85,11 +85,11 @@ showDrawer ?
             </div>*/}
                   {
                     !openMenu ? <></> : <>
-                    <div style={{position:"absolute", width:"100%", top:"6rem", left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
+                    <div style={{position:"absolute", width:"100%", top:"5.5rem", left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
                         <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Sección</div>
                         <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Sobre Mí</div>
                         <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
-                        <div style={{textAlign:"center"}} className={styles.menuItem}>
+                        <div style={{textAlign:"center", paddingBottom:"0"}} className={styles.menuItem}>
                           <Instagram className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
                           <Call className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
                           <MailOutline className={styles.menuIcon} sx={{fontSize:30}}/>
