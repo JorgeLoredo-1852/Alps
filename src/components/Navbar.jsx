@@ -67,7 +67,7 @@ export default function Navbar() {
               src="/images/logo.png" // Route of the image file
               height={downMd ? 62.5 : 75} // Desired size with correct aspect ratio
               width={downMd ? 73.75 : 88.5} // Desired size with correct aspect ratio
-              alt="Analizarte"
+              alt="Analizarte" 
               className={styles.logo}
             />
             {
