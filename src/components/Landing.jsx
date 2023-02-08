@@ -50,7 +50,7 @@ export default function Landing() {
               <Image
                 src="/images/ana2.png" // Route of the image file
                 height={800} // Desired size with correct aspect ratio
-                width={370} // Desired size with correct aspect ratio
+                width={360} // Desired size with correct aspect ratio
                 alt="Ana Loredo"
               />
             </div>
