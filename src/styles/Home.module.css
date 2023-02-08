@@ -31,6 +31,7 @@
   align-items: center;
   color: #28215C;
   margin-top: 0.5rem;
+  margin-left: 5.5rem;
 }
 
 .socials {
@@ -44,30 +45,75 @@
 }
 
 .container{
+  max-width: 1200px;
+  padding: 1rem;
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .hero{  
   z-index: -10;
   position: absolute;
+  width: 100%;
+  padding-top: 7rem;
+
+  display: flex;
+  justify-content: center;
 }
 
 .titles{
   display: flex;
+  height: 100%;
   flex-direction: column;
+  padding-top: 2rem;
 }
 
 .titleMain{
-  font-size: 10rem;
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #28215C;
 }
 
 .titleSecondary{
-  font-size: 6rem;
+  font-size: 3rem;
+  color: #28215C;
+}
 
+.points{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-left: -1rem;
+}
+
+.info{
+  width:20rem;
+  margin-top: 10rem;
+}
+.subtitle{
+  color: #28215C;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.line{
+  flex: 1;
+  border-bottom: 2px solid #28215C;
+}
+.description{
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  color: #5364A7;
+  margin-left: 2rem;
+}
+.location{
+  color: #5364A7;
+  font-size: 1.1rem;
 }
 
 .hoverUnderlineAnimation {
@@ -152,6 +198,11 @@ top: 5.5rem;
   color: #5364A7;
   line-height: 0.8;
   transition: all 0.3s;
+}
+
+.locationIcon{
+  color: #28215C;
+  line-height: 0.8;
 }
 
 
