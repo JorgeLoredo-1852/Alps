@@ -70,7 +70,6 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding-top: 2rem;
 }
 
 .titleMain{
@@ -94,7 +93,7 @@
 
 .info{
   width:20rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .subtitle{
   color: #28215C;
