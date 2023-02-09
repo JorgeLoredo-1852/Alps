@@ -349,7 +349,7 @@ top: 5.5rem;
   }
 
   .blob{
-    animation: blobGrow 10s infinite ease-in-out;
+    animation: blobGrow 15s infinite ease-in-out;
   }
 
   @keyframes blobGrow {

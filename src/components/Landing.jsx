@@ -8,7 +8,9 @@ import {Box, Grid, IconButton} from "@mui/material"
 import Navbar from '@/components/Navbar'
 import {PlaceOutlined} from '@mui/icons-material';
 
-
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useState, useEffect } from 'react'
 
 const inter = Poppins({
   weight: '400',
@@ -16,6 +18,24 @@ const inter = Poppins({
 })
 
 export default function Landing() {
+  const themeM = useTheme();
+  const downLg = useMediaQuery(themeM.breakpoints.down('lg'));
+  const downMd = useMediaQuery(themeM.breakpoints.down('md'));
+  const downSm = useMediaQuery(themeM.breakpoints.down('sm'));
+  const downXl = useMediaQuery(themeM.breakpoints.down('xl'));
+  const [imgHeight, setImgHeight] = useState(0)
+  const [imgWidth, setImgWidth] = useState(0)
+
+  useEffect(()=>{
+    if(downXl){
+      setImgHeight(700)
+      setImgWidth(320)
+    } else {
+      setImgHeight(800)
+      setImgWidth(360)
+    }
+  },[downLg, downSm, downMd, downXl])
+
   return (
           <Box className={styles.container}> 
             <div className={styles.titles}>
@@ -49,8 +69,8 @@ export default function Landing() {
             <div className={styles.hero}>
               <Image
                 src="/images/ana2.png" // Route of the image file
-                height={800} // Desired size with correct aspect ratio
-                width={360} // Desired size with correct aspect ratio
+                height={imgHeight} // Desired size with correct aspect ratio
+                width={imgWidth} // Desired size with correct aspect ratio
                 alt="Ana Loredo"
               />
             </div>
