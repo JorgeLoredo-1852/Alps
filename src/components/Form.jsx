@@ -95,7 +95,7 @@ export default function Form() {
 
   return (
         <div style={{display:"flex", justifyContent:"center", width:"100%", height:"100%"}}>
-        <Grid container sx={{position:"relative", height:"100%", maxWidth:"1200px", paddingTop:"12rem"}} >
+        <Grid container sx={{position:"relative", height:"100%", maxWidth:"1200px", paddingTop:"11rem"}} >
             <Grid item xs={6} sx={{display:"flex", flexDirection:"column", padding:"1rem"}}>
                 <div style={{fontSize:"3.5rem", color:"#28215C", fontWeight:"800"}}>
                     Agenda una cita
@@ -140,8 +140,8 @@ export default function Form() {
                                     sx={{ ml: 1, flex: 1 }}
                                     inputProps={{ 'aria-label': 'Ana Loredo' }}
                                     multiline
-                                    minRows={6}
-                                    maxRows={6}
+                                    minRows={5}
+                                    maxRows={5}
                                     fullWidth
                                     name="message"
                                 />               

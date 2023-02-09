@@ -46,7 +46,7 @@ export default function Home() {
         <Box sx={{height:"100vh", backgroundColor:"#5364A7"}}>
           <div></div>
         </Box>
-        <Box sx={{backgroundColor:"#CCD9F0"}}>
+        <Box sx={{minHeight:"100vh", backgroundColor:"#CCD9F0"}}>
           <Form/>
         </Box>
         </div>
