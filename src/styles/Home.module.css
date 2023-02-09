@@ -271,3 +271,92 @@ top: 5.5rem;
       top:0;
       transform: rotate(135deg);
   }
+
+
+  .point1 {
+    animation: pointMove1 2.5s infinite ease-in-out;
+  }
+
+  .point2 {
+    animation: pointMove2 2.5s infinite ease-in-out;
+  }
+
+  .point3 {
+    animation: pointMove3 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pointMove1 {
+    0%{
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(-10px);
+    }
+    20%{
+      transform: translateY(0px);
+    }
+    30%{
+      transform: translateY(0px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes pointMove2 {
+    0%{
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(0px);
+    }
+    20%{
+      transform: translateY(-10px);
+    }
+    30%{
+      transform: translateY(0px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes pointMove3 {
+    0%{
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(0px);
+    }
+    20%{
+      transform: translateY(0px);
+    }
+    30%{
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(0px);
+    }
+  }
+
+  .blob{
+    animation: blobGrow 10s infinite ease-in-out;
+  }
+
+  @keyframes blobGrow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

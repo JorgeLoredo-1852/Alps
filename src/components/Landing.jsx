@@ -24,19 +24,19 @@ export default function Landing() {
               <div className={styles.titleSecondary}>Psicóloga</div>
               <div className={styles.points}>
 
-                <div>
+                <div className={styles.point1}>
                   <svg width="75" height="75" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.149 20.8025C46.1895 27.0565 42.4795 35.2185 36.9675 38.69C31.482 42.1615 24.168 40.9425 19.292 37.206C14.3895 33.4695 11.8985 27.2155 13.4885 21.5445C15.0785 15.9 20.8025 10.8385 27.56 10.494C34.3175 10.176 42.1085 14.522 44.149 20.8025Z" fill="#5364A7"/>
                   </svg>
                 </div>
 
-                <div>
+                <div className={styles.point2}>
                   <svg width="75" height="75" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.149 20.8025C46.1895 27.0565 42.4795 35.2185 36.9675 38.69C31.482 42.1615 24.168 40.9425 19.292 37.206C14.3895 33.4695 11.8985 27.2155 13.4885 21.5445C15.0785 15.9 20.8025 10.8385 27.56 10.494C34.3175 10.176 42.1085 14.522 44.149 20.8025Z" fill="#5364A7"/>
                   </svg>
                 </div>
 
-                <div>
+                <div className={styles.point3}>
                   <svg width="75" height="75" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.149 20.8025C46.1895 27.0565 42.4795 35.2185 36.9675 38.69C31.482 42.1615 24.168 40.9425 19.292 37.206C14.3895 33.4695 11.8985 27.2155 13.4885 21.5445C15.0785 15.9 20.8025 10.8385 27.56 10.494C34.3175 10.176 42.1085 14.522 44.149 20.8025Z" fill="#5364A7"/>
                   </svg>

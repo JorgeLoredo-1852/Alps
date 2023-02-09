@@ -101,7 +101,7 @@ showDrawer ?
                         <p onClick={onClickkNavbar} className={styles.hoverUnderlineAnimation}>Contacto</p>
                     </div>
                     <div className={styles.socials}>
-                        <div style={{zIndex: -10 ,position:"absolute", width:"30rem", top:"-17rem", right:downLg ? "-9rem":"-6.5rem"}}>
+                        <div className={styles.blob} style={{zIndex: -10 ,position:"absolute", width:"30rem", top:"-17rem", right:downLg ? "-9rem":"-6.5rem"}}>
                             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#5364A7" d="M41.8,-73.7C53.2,-65.9,60.7,-52.6,67.5,-39.4C74.4,-26.2,80.6,-13.1,81.5,0.5C82.4,14.2,78.1,28.4,70.2,39.7C62.3,51.1,50.8,59.6,38.5,66.3C26.2,73,13.1,77.9,0.2,77.5C-12.7,77.2,-25.4,71.5,-39,65.6C-52.7,59.7,-67.4,53.6,-75.1,42.6C-82.7,31.6,-83.4,15.8,-83.8,-0.3C-84.3,-16.3,-84.5,-32.6,-77.3,-44.4C-70.1,-56.2,-55.5,-63.4,-41.3,-69.7C-27.2,-76,-13.6,-81.3,0.8,-82.7C15.2,-84.1,30.5,-81.6,41.8,-73.7Z" transform="translate(100 100)" />
                             </svg>
