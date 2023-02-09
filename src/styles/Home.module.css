@@ -66,6 +66,12 @@
   justify-content: center;
 }
 
+@media (max-width: 1400px) {
+  .hero{
+    padding-top: 12rem;
+  }
+}
+
 .titles{
   display: flex;
   height: 100%;

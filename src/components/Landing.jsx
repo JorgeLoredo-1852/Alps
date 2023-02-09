@@ -28,8 +28,8 @@ export default function Landing() {
 
   useEffect(()=>{
     if(downXl){
-      setImgHeight(650)
-      setImgWidth(300)
+      setImgHeight(800)
+      setImgWidth(370)
     } else {
       setImgHeight(800)
       setImgWidth(370)
