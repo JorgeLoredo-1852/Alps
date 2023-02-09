@@ -76,7 +76,7 @@ export default function Landing() {
                 />                
               </div>
 
-              <div style={{position:"absolute", bottom:"0rem", left:"-58rem", zIndex:"-20"}}>
+              <div style={{position:"absolute", bottom:"0rem", zIndex:"-20"}}>
                 <Image
                   src="/images/triangle.png" // Route of the image file
                   height={300} // Desired size with correct aspect ratio

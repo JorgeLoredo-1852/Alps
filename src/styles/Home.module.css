@@ -56,6 +56,12 @@
   position: relative;
 }
 
+@media (max-width: 1400px) {
+  .container{
+    padding-top: 0rem;
+  }
+}
+
 .hero{  
   z-index: -10;
   position: absolute;
@@ -67,7 +73,7 @@
 
 @media (max-width: 1400px) {
   .hero{
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
 }
 
