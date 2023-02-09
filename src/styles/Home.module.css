@@ -372,3 +372,12 @@ top: 5.5rem;
       transform: rotate(359deg);
     }
   }
+
+
+.formContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
