@@ -43,7 +43,7 @@ export default function Landing() {
 
             downMd ? <>
             
-            <div className={styles.titles} style={{width:"100%", justifyContent:"center"}}>
+            <div className={styles.titles} style={{width:"100%", justifyContent:"center", zIndex:"-20"}}>
             <div className={styles.titleMain} style={{width:"100%", textAlign:"center", fontSize:"3.3rem", marginTop:"0rem"}}>Ana Loredo</div>
               <div className={styles.titleSecondary} style={{width:"100%", textAlign:"center", fontSize:"2rem"}}>Psicóloga</div>
             <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"25rem", marginTop:"-2rem"}}>
