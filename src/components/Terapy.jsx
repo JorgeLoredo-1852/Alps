@@ -115,7 +115,8 @@ const Timeline = ({ setObserver, callback }) => {
     setObserver(circle3.current);
   }, []);
   return (
-        <div style={{width:"100%", height:"100%"}} className={inter.className}>
+        <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}} className={inter.className}>
+            <div style={{maxWidth:"1280px",width:"100%", height:"100%"}}>
             {
                 downSm ? <>
                 
@@ -188,7 +189,7 @@ const Timeline = ({ setObserver, callback }) => {
                 ¿Por qué es importante ir a terapia? 
             </div>
             <Grid container>
-                    <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "0rem" :"5rem"}} >
+                    <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "3rem" :"8rem"}} >
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
                         </div>
@@ -203,9 +204,9 @@ const Timeline = ({ setObserver, callback }) => {
                             &nbsp;
                             </div>
                         </div>
-                        <div id="timeline1" ref={timeline1} className={styles.timelineN1} style={{height: downSm ? "650px" : "400px"}}/>
+                        <div id="timeline1" ref={timeline1} className={styles.timelineN1} style={{height: downSm ? "650px" : "350px"}}/>
                     </Grid>
-                    <Grid item xs={8} sm={5} sx={{marginTop:"4rem"}}>
+                    <Grid item xs={8} sm={5} sx={{marginTop:"7rem"}}>
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={250} height={250}/>
                 </Grid>
             </Grid>
@@ -225,7 +226,7 @@ const Timeline = ({ setObserver, callback }) => {
                     &nbsp;
                     </div>
                 </div>
-                <div id="timeline2" ref={timeline2} className={styles.timelineN2} style={{height: downSm ? "650px" : "400px"}}/>
+                <div id="timeline2" ref={timeline2} className={styles.timelineN2} style={{height: downSm ? "650px" : "350px"}}/>
             </Grid>
             <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-start", marginTop:downMd ? "-8rem" : "-5rem", paddingRight:"4rem"}} >
             <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
@@ -265,7 +266,7 @@ const Timeline = ({ setObserver, callback }) => {
                 </Grid>
       </Grid>
                 </>
-            }
+            }</div>
         </div>
   )
 }
