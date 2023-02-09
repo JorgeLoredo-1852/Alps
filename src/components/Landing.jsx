@@ -28,8 +28,8 @@ export default function Landing() {
 
   useEffect(()=>{
     if(downXl){
-      setImgHeight(800)
-      setImgWidth(370)
+      setImgHeight(700)
+      setImgWidth(323)
     } else {
       setImgHeight(800)
       setImgWidth(370)
@@ -67,12 +67,15 @@ export default function Landing() {
             </div>
 
             <div className={styles.hero}>
-              <Image
-                src="/images/ana2.png" // Route of the image file
-                height={imgHeight} // Desired size with correct aspect ratio
-                width={imgWidth} // Desired size with correct aspect ratio
-                alt="Ana Loredo"
-              />
+              <div style={{paddingTop:"7rem"}}>
+                <Image
+                  src="/images/ana2.png" // Route of the image file
+                  height={imgHeight} // Desired size with correct aspect ratio
+                  width={imgWidth} // Desired size with correct aspect ratio
+                  alt="Ana Loredo"
+                />                
+              </div>
+
               <div style={{position:"absolute", bottom:"0rem", left:"-58rem", zIndex:"-20"}}>
                 <Image
                   src="/images/triangle.png" // Route of the image file
