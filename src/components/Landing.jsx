@@ -73,6 +73,14 @@ export default function Landing() {
                 width={imgWidth} // Desired size with correct aspect ratio
                 alt="Ana Loredo"
               />
+              <div style={{position:"absolute", bottom:"0rem", left:"-58rem", zIndex:"-20"}}>
+                <Image
+                  src="/images/triangle.png" // Route of the image file
+                  height={300} // Desired size with correct aspect ratio
+                  width={3000} // Desired size with correct aspect ratio
+                  alt="Triangle"
+                />    
+              </div>
             </div>
             
   

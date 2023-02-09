@@ -99,7 +99,8 @@
 
 .info{
   width:20rem;
-  margin-top: 5rem;
+  height: 100%;
+  margin-top: 10rem;
 }
 .subtitle{
   color: #28215C;

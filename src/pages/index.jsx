@@ -39,14 +39,14 @@ export default function Home() {
         </Box>
 
         <Box sx={{height:"100vh", backgroundColor:"#5364A7"}}>
-          <div>Seccion</div>
+          <div></div>
         </Box>
 
         <Box sx={{height:"100vh", backgroundColor:"#28215C"}}>
-          <div>Sobre Mi</div>
+          <div></div>
         </Box>
         <Box sx={{height:"100vh", backgroundColor:"#28215C"}}>
-          <div>Contacto</div>
+          <div></div>
         </Box>
         </div>
       </main>
