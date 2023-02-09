@@ -6,7 +6,7 @@ import { Inter } from '@next/font/google'
 import { useEffect, useState } from 'react' 
 
 import {Box, Grid, IconButton, OutlinedInput} from "@mui/material"
-import {Instagram, Call, MailOutline} from '@mui/icons-material';
+import {Instagram, WhatsApp, MailOutline} from '@mui/icons-material';
 import styles from '@/styles/Home.module.css'
 
 import {ReactComponent as ReactLogo} from '../assets/icons/blobSocials.svg';
@@ -86,7 +86,7 @@ showDrawer ?
                         <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
                         <div style={{textAlign:"center", paddingBottom:"0"}} className={styles.menuItem}>
                           <Instagram className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
-                          <Call className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
+                          <WhatsApp className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
                           <MailOutline className={styles.menuIcon} sx={{fontSize:30}}/>
 
                         </div>
@@ -111,7 +111,7 @@ showDrawer ?
                                 <Instagram className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} aria-label="Delete">
-                                <Call className={styles.customIcon} sx={{fontSize:45}}/>
+                                <WhatsApp className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} aria-label="Delete">
                                 <MailOutline className={styles.customIcon} sx={{fontSize:45}}/>

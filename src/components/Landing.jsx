@@ -6,7 +6,7 @@ import { Poppins } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import {Box, Grid, IconButton} from "@mui/material"
 import Navbar from '@/components/Navbar'
-import {PlaceOutlined} from '@mui/icons-material';
+import {PlaceOutlined, Call, WhatsApp} from '@mui/icons-material';
 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -38,6 +38,37 @@ export default function Landing() {
 
   return (
           <Box className={styles.container}> 
+
+          {
+
+            downMd ? <>
+            
+            <div className={styles.titles} style={{width:"100%", justifyContent:"center"}}>
+            <div className={styles.titleMain} style={{width:"100%", textAlign:"center", fontSize:"3.3rem", marginTop:"0rem"}}>Ana Loredo</div>
+              <div className={styles.titleSecondary} style={{width:"100%", textAlign:"center", fontSize:"2rem"}}>Psicóloga</div>
+            <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"25rem", marginTop:"-2rem"}}>
+              <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={280} height={280}/>
+              <div style={{zIndex:"-30", width: "20rem",position:"absolute"}}>
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#5364A7" d="M63.6,-49.8C78.9,-31.6,85.2,-5.4,79.6,17.8C74.1,41,56.6,61.2,34.2,72.6C11.9,83.9,-15.5,86.4,-38.2,76.5C-60.8,66.6,-78.9,44.4,-83.3,20.3C-87.8,-3.8,-78.8,-29.7,-62.6,-48.1C-46.5,-66.5,-23.2,-77.5,0.5,-77.9C24.2,-78.2,48.4,-68,63.6,-49.8Z" transform="translate(100 100)" />
+                </svg>
+              </div>
+            </div>
+              
+              <div style={{display:"flex", flexDirection:"column",  marginTop:"-1rem"}}>
+                  <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    <PlaceOutlined className={styles.locationIcon} sx={{fontSize:30, alignSelf:"center", marginRight:"0.7rem"}}/>
+                    <div className={styles.subtitle} style={{textAlign:"center", margin:"0", color:"#5364A7"}}>Plaza San Agustín</div>                    
+                  </div>
+                  <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:"0.5rem"}}>
+                    <WhatsApp  className={styles.locationIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
+                    <div className={styles.subtitle} style={{textAlign:"center", margin:"0", color:"#5364A7"}}>+52 81 8179 7145</div>                 
+                  </div>   
+                </div>            
+            </div>
+            
+            
+            </> : <>
             <div className={styles.titles}>
               <div className={styles.titleMain}>Ana</div>
               <div className={styles.titleMain}>Loredo</div>
@@ -107,6 +138,8 @@ export default function Landing() {
                 </div>                
               </div>
             </div>
+            </>
+          }
           </Box>
   )
 }
