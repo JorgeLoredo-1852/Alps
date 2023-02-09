@@ -12,11 +12,13 @@ import {Snackbar, Alert, Container, InputBase, Grid, InputAdornment, OutlinedInp
 import emailjs from '@emailjs/browser';
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
-
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import CancelIcon from '@mui/icons-material/Cancel';
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-
+import ClearIcon from '@mui/icons-material/Clear';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -157,15 +159,27 @@ export default function Form() {
             </Grid>
 
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                    Correo Enviado
-                </Alert>
+            <div style={{display:"flex", backgroundColor:"#5364A7", padding:"0.5rem 1.2rem", borderRadius:"5px"}}>
+                    <TaskAltIcon sx={{fontSize:25, color:"white"}}/>
+                    <div style={{margin:"0 1rem", color:"white"}}>
+                        Correo Enviado
+                    </div>
+                    <div onClick={handleClose} style={{lineHeight:"0", display:"flex", justifyItems:"center"}}>
+                    <ClearIcon sx={{cursor:"pointer", fontSize:20, alignSelf:"center", color:"white"}}/>
+                    </div>
+                </div>
             </Snackbar>
 
             <Snackbar open={openFailed} autoHideDuration={6000} onClose={handleCloseFailed}>
-                <Alert onClose={handleCloseFailed} severity="info" sx={{ width: '100%' }}>
-                    Campos faltantes
-                </Alert>
+                <div style={{display:"flex", backgroundColor:"#5364A7", padding:"0.5rem 1.2rem", borderRadius:"5px"}}>
+                    <WarningAmberIcon sx={{fontSize:25, color:"white"}}/>
+                    <div style={{margin:"0 1rem", color:"white"}}>
+                        Campos Faltantes 
+                    </div>
+                    <div onClick={handleCloseFailed} style={{lineHeight:"0", display:"flex", justifyItems:"center"}}>
+                    <ClearIcon sx={{cursor:"pointer", fontSize:20, alignSelf:"center", color:"white"}}/>
+                    </div>
+                </div>
             </Snackbar>
 
 
