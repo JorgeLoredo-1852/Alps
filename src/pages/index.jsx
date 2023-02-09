@@ -9,6 +9,7 @@ import {Instagram, WhatsApp, MailOutline} from '@mui/icons-material';
 import Navbar from '@/components/Navbar'
 import Landing from '@/components/Landing'
 import Form from '@/components/Form'
+import Terapy from '@/components/Terapy'
 
 import { ThemeProvider } from '@mui/material'
 import theme from '@/styles/material'
@@ -43,8 +44,8 @@ export default function Home() {
           <div></div>
         </Box>
 
-        <Box sx={{height:"100vh", backgroundColor:"#5364A7"}}>
-          <div></div>
+        <Box sx={{minHeight:"100vh", backgroundColor:"#5364A7"}}>
+          <Terapy/>
         </Box>
         <Box sx={{minHeight:"100vh", backgroundColor:"#CCD9F0"}}>
           <Form/>

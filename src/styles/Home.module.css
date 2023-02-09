@@ -389,3 +389,69 @@ top: 5.5rem;
 .formButton:hover{
   transform: translateY(3px);
 }
+
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+}
+
+.timelineN0 {
+  height: 150px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.timelineN1 {
+  height: 750px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.timelineN2 {
+  height: 750px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.timelineN3 {
+  height: 750px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.timelineN4 {
+  height: 250px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.timelineN5 {
+  height: 350px;
+  width: 5px;
+  background-color: #e5e5e5;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+}
+
+.circleWrapper {
+  position: relative;
+}
+
+.carousel .control-dots .dot{
+  width:16px !important;
+  height:16px !important;
+}

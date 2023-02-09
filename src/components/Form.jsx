@@ -196,7 +196,7 @@ export default function Form() {
                     width={100} // Desired size with correct aspect ratio
                     alt="Analizarte" 
                     className={styles.logo}
-                    style={{position:"absolute", marginLeft:"1rem", marginTop:"2rem"}}
+                    style={{position:"absolute", marginLeft:"2rem", marginTop:"2rem"}}
                     />
               </div>
         </Grid>
