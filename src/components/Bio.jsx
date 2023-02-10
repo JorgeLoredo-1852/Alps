@@ -56,8 +56,8 @@ export default function Bio() {
 
         <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}} >
             <div style={{maxWidth:"1280px",width:"100%", height:"100%"}}>
-                <Grid container style={{width:"100%", height:"100vh", padding:"3rem", paddingBottom:"0"}}>
-                    <Grid item xs={12} md={7} sx={{height:"100%", padding:downMd ? "0" : "0 1rem", display:"flex", flexDirection:"column"}}>
+                <Grid container style={{width:"100%", height:"100vh", padding:downMd ? "0" : "3rem", paddingBottom:"0"}}>
+                    <Grid item xs={12} md={7} sx={{height:"100%", padding:downMd ? "2.5rem" : "0 1rem", display:"flex", flexDirection:"column"}}>
                         <div style={{display:"flex", justifyContent:downMd ? "center":""}}>
                             <Image
                                 src="/images/logo.png" // Route of the image file
