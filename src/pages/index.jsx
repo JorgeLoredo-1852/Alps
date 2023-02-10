@@ -37,7 +37,7 @@ export default function Home() {
           
         <Box  sx={{overflow:"hidden", width:"100vw", height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center"}}>
           <Navbar/>          
-          <div style={{display:"flex", justifyContent:"center", flex:1}}>
+          <div style={{overflow:"hidden", display:"flex", justifyContent:"center", flex:1}}>
             <Landing/>
           </div>
         </Box>
@@ -47,7 +47,7 @@ export default function Home() {
         <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}}>
           <Terapy/>
         </Box>
-        <Box sx={{minHeight:"100vh", backgroundColor:"#CCD9F0"}}>
+        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#CCD9F0"}}>
           <Form/>
         </Box>
         </div>

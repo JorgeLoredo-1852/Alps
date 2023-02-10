@@ -462,17 +462,3 @@ top: 5.5rem;
     filter: drop-shadow(10px 0px 0px rgba(40, 33, 92, 0.5));
 }
 
-.container1 {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior:auto;
-}
-
-.section3{
-  width:5px;
-  overflow-y: scroll;
-   scroll-snap-align: start;
-   position: relative;
- 
- }
