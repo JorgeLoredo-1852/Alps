@@ -455,3 +455,8 @@ top: 5.5rem;
   width:16px !important;
   height:16px !important;
 }
+
+.ana5{
+    -webkit-filter: drop-shadow(10px 0px 0px rgba(40, 33, 92, 0.5));
+    filter: drop-shadow(10px 0px 0px rgba(40, 33, 92, 0.5));
+}

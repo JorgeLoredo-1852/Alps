@@ -10,6 +10,7 @@ import Navbar from '@/components/Navbar'
 import Landing from '@/components/Landing'
 import Form from '@/components/Form'
 import Terapy from '@/components/Terapy'
+import Bio from '@/components/Bio'
 
 import { ThemeProvider } from '@mui/material'
 import theme from '@/styles/material'
@@ -40,8 +41,8 @@ export default function Home() {
           </div>
         </Box>
 
-        <Box sx={{height:"100vh", backgroundColor:"#5364A7"}}>
-          <div></div>
+        <Box sx={{height:"100vh", overflow:"hidden", backgroundColor:"#5364A7"}}>
+          <Bio/>
         </Box>
 
         <Box sx={{minHeight:"100vh", backgroundColor:"#5364A7"}}>
