@@ -59,11 +59,11 @@ export default function Bio({handlePageContact}) {
     }
 
     const onClickWhatsapp = () =>{
-        window.open('https://wa.link/5ghtzl', '_blank', 'noreferrer');
+        window.open('https://wa.link/011ynh', '_blank', 'noreferrer');
     }
 
     const onClickMail = () =>{
-      console.log("Mail")
+        window.open('mailto:psi.ana.loredo@gmail.com',  "_top", 'noreferrer');
     }
 
 
