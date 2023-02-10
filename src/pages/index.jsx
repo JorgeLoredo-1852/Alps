@@ -57,7 +57,7 @@ const handlePageContact = () => {
           </div>
         </Box>
         <Box sx={{height:"100vh", overflow:"hidden", backgroundColor:"#5364A7"}} ref={refListBio}>
-          <Bio/>
+          <Bio handlePageContact={handlePageContact}/>
         </Box>
         <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}} ref={refListTerapy}>
           <Terapy/>

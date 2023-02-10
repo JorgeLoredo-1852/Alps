@@ -61,27 +61,25 @@ export default function Navbar({handlePageBio, handlePageTerapy, handlePageConta
 
 
 
-    return(
-
-    <Box className={styles.header}>
-            <Image
-              src="/images/logo.png" // Route of the image file
-              height={downMd ? 62.5 : 75} // Desired size with correct aspect ratio
-              width={downMd ? 73.75 : 88.5} // Desired size with correct aspect ratio
-              alt="Analizarte" 
-              className={styles.logo}
-            />
+    return(<>
             {
 
 showDrawer ? 
                 <>
-
+                <Box className={styles.header} sx={{zIndex:"100"}}>
+                <Image
+                  src="/images/logo.png" // Route of the image file
+                  height={downMd ? 62.5 : 75} // Desired size with correct aspect ratio
+                  width={downMd ? 73.75 : 88.5} // Desired size with correct aspect ratio
+                  alt="Analizarte" 
+                  className={styles.logo}
+                />
                   <input checked={openMenu} onChange={()=>setOpenMenu(!openMenu)} type="checkbox" className={styles.navigation__checkbox} id="navi-toggle"/>
 
                   <label htmlFor="navi-toggle" className={styles.navigation__button} style={{cursor:downSm ? "unset" : "pointer"}}>
                       <span className={styles.navigation__icon} >&nbsp;</span>
-                  </label>
-                  <div className={openMenu ?  styles.menuContainer : styles.hideMenu} style={{zIndex:"-5", position:"absolute", width:"100%",left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
+                  </label></Box>
+                  <div className={openMenu ?  styles.menuContainer : styles.hideMenu} style={{zIndex:"50",position:"absolute", width:"100%",left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
                         <div onClick={handlePageBio} style={{textAlign:"center"}} className={styles.menuItem}>Sobre Mí</div>
                         <div onClick={handlePageTerapy} style={{textAlign:"center"}} className={styles.menuItem}>Sección</div>
                         <div onClick={handlePageContact} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
@@ -95,7 +93,14 @@ showDrawer ?
 
                 </>
                 :
-                <>
+                <>    <Box className={styles.header}>
+                <Image
+                  src="/images/logo.png" // Route of the image file
+                  height={downMd ? 62.5 : 75} // Desired size with correct aspect ratio
+                  width={downMd ? 73.75 : 88.5} // Desired size with correct aspect ratio
+                  alt="Analizarte" 
+                  className={styles.logo}
+                />
                     <div className={styles.sections}>
                         <p onClick={handlePageBio} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sobre Mí</p>
                         <p onClick={handlePageTerapy} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sección</p>
@@ -118,11 +123,11 @@ showDrawer ?
                                 <MailOutline className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                         </ThemeProvider>
-                    </div>
+                    </div></Box>
                 </>
 
             }
-          </Box>
+          </>
 
     )
 

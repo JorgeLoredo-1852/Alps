@@ -46,7 +46,7 @@ const theme = createTheme({
     subsets: ['latin'],
   })
 
-export default function Bio() {
+export default function Bio({handlePageContact}) {
     const themeM = useTheme();
 
     const downLg = useMediaQuery(themeM.breakpoints.down('lg'));
@@ -102,7 +102,7 @@ export default function Bio() {
                             <div className={inter.className} style={{fontSize:downMd ? "4.5rem" : "5.5rem", lineHeight:"1", fontWeight:"800", color:"#CCD9F0", textAlign:downMd ? "center":""}}>Ana Loredo</div>
                             <div style={{fontSize:"1.4rem", color:"white", marginTop:"1rem", textAlign:downMd ? "justify":""}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt. Nulla mollis finibus posuere. Sed vehicula neque rhoncus.</div>
                             <div style={{width:"100%", display:"flex", justifyContent:downMd ? "center":""}}>
-                                <div className={styles.formButton} onClick={onClickContact} style={{marginBottom:downMd ? "" : "4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"1rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
+                                <div className={styles.formButton} onClick={handlePageContact} style={{marginBottom:downMd ? "" : "4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"1rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
                             </div>
                             
                         </div></ScrollAnimatable>
