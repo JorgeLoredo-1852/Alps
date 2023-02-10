@@ -57,7 +57,7 @@ export default function Bio() {
         <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}} >
             <div style={{maxWidth:"1280px",width:"100%", height:"100%"}}>
                 <Grid container style={{width:"100%", height:"100vh", padding:downMd ? "0" : "3rem", paddingBottom:"0"}}>
-                    <Grid item xs={12} md={7} sx={{height:"100%", padding:downMd ? "2.5rem" : "0 1rem", display:"flex", flexDirection:"column"}}>
+                    <Grid item xs={12} md={7} sx={{height:"100%", padding:downMd ? "2rem" : "0 1rem", display:"flex", flexDirection:"column"}}>
                         <div style={{display:"flex", justifyContent:downMd ? "center":""}}>
                             <Image
                                 src="/images/logo.png" // Route of the image file
@@ -66,13 +66,13 @@ export default function Bio() {
                                 alt="Analizarte" 
                                 className={styles.logo}
                             />
-                            <div className={styles.customHoverFocus} aria-label="Delete">
+                            <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0.4rem" :""}} aria-label="Delete">
                                 <Instagram className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
-                            <div className={styles.customHoverFocus} aria-label="Delete">
+                            <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0.4rem" :""}} aria-label="Delete">
                                 <WhatsApp className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
-                            <div className={styles.customHoverFocus} aria-label="Delete">
+                            <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0" :""}} aria-label="Delete">
                                 <MailOutline className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             
