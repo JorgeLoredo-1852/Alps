@@ -21,6 +21,12 @@ import TimelineObserver from "react-timeline-animation";
 
 import ClearIcon from '@mui/icons-material/Clear';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {
+    slideInBottom,
+    slideOnScroll,
+  } from '@/components/Animations';
+import ScrollAnimatable from '@/components/Animation';
+import { slideInLeft, slideInRight } from './Animations'
 
 const theme = createTheme({
     status: {
@@ -110,19 +116,24 @@ const Timeline = ({ setObserver, callback }) => {
     setObserver(timeline1.current);
     setObserver(timeline2.current);
     setObserver(timeline3.current);
-    setObserver(circle1.current);
-    setObserver(circle2.current);
-    setObserver(circle3.current);
+    setObserver(circle1.current, someCallback);
+    setObserver(circle2.current, someCallback2);
+    setObserver(circle3.current, someCallback3);
   }, []);
   return (
         <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}} className={inter.className}>
             <div style={{maxWidth:"1280px",width:"100%", height:"100%"}}>
             {
                 downSm ? <>
-                
+                <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}
+                        >
                 <div style={{width:"100%", fontSize:"2.7rem", textAlign:"center", padding:"4rem 0", color:"#CCD9F0", fontWeight:"800"}}>
                     ¿Por qué es importante ir a terapia? 
-                </div>
+                </div></ScrollAnimatable>
                 <Grid container>
                     <Grid item xs={2} style={{display:"flex", flexDirection:"column", alignItems:"center" }}>
                         <div id="timeline0" ref={timeline0} className={styles.timelineN0} />
@@ -133,14 +144,21 @@ const Timeline = ({ setObserver, callback }) => {
                         </div>
                         <div id="timeline1" ref={timeline1} className={styles.timelineN1} style={{height: downSm ? "500px" : "400px"}}/>
                     </Grid>
-                    <Grid item xs={10} sm={5} sx={{marginTop:"1rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}>
+                    <Grid item xs={10} sm={5}>
+                    <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{display:message1 ? "":"none", marginTop:"1rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}
+                        >
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem", marginBottom:"1rem"}} width={200} height={200}/>
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
                         </div>
                         <div style={{ color:"white",fontSize:"1.1rem", textAlign:"left"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
-                        </div>
+                        </div></ScrollAnimatable>
                     </Grid>
                 </Grid>
 
@@ -153,7 +171,16 @@ const Timeline = ({ setObserver, callback }) => {
                         </div>
                         <div id="timeline2" ref={timeline2} className={styles.timelineN2} style={{height: downSm ? "500px" : "400px"}}/>
                     </Grid>
-                    <Grid item xs={10} sm={5} sx={{marginTop:"-13.5rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}>
+                    <Grid item xs={10} sm={5} >
+                        <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{display:message2 ? "":"none", marginTop:"-13.5rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}
+                            >
+
+                            
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem", marginBottom:"1rem"}} width={200} height={200}/>
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
@@ -161,6 +188,7 @@ const Timeline = ({ setObserver, callback }) => {
                         <div style={{ color:"white",fontSize:"1.1rem", textAlign:"left"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
                         </div>
+                        </ScrollAnimatable>
                     </Grid>
                 </Grid> 
 
@@ -173,7 +201,14 @@ const Timeline = ({ setObserver, callback }) => {
                     </div>
                     <div id="timeline3" ref={timeline3} className={styles.timelineN3} style={{height: downSm ? "300px" : "300px"}}/>
                     </Grid>
-                    <Grid item xs={10} sm={5} sx={{marginTop:"-13.5rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}>
+                    <Grid item xs={10} sm={5}>
+                        <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{display: message3 ? "":"none", marginTop:"-13.5rem", paddingLeft:"1rem", paddingRight:"1.5rem"}}
+                            >
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem", marginBottom:"1rem"}} width={200} height={200}/>
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
@@ -181,21 +216,36 @@ const Timeline = ({ setObserver, callback }) => {
                         <div style={{ color:"white",fontSize:"1.1rem", textAlign:"left"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
                         </div>
+                        </ScrollAnimatable>
                     </Grid>
                 </Grid> 
                 
                 </> : <>
+                <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}
+                        >
                             <div style={{width:"100%", fontSize:"3.5rem", textAlign:"center", padding:"4rem 0", color:"#CCD9F0", fontWeight:"800"}}>
                 ¿Por qué es importante ir a terapia? 
-            </div>
+            </div></ScrollAnimatable>
             <Grid container>
-                    <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "3rem" :"8rem"}} >
+                    <Grid item xs={2} sm={5} >
+                        <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInLeft}
+                            transition={slideOnScroll}
+                            style={{flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "3rem" :"8rem", display: message1 ? "flex" : "none"}}
+                        >
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
                         </div>
                         <div style={{ color:"white",fontSize:"1.3rem", textAlign:"right"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
                         </div>
+                        </ScrollAnimatable>
                     </Grid>
                     <Grid item xs={2} style={{display:"flex", flexDirection:"column", alignItems:"center" }}>
                         <div id="timeline0" ref={timeline0} className={styles.timelineN0} />
@@ -206,8 +256,16 @@ const Timeline = ({ setObserver, callback }) => {
                         </div>
                         <div id="timeline1" ref={timeline1} className={styles.timelineN1} style={{height: downSm ? "650px" : "350px"}}/>
                     </Grid>
-                    <Grid item xs={8} sm={5} sx={{marginTop:"7rem"}}>
+                    <Grid item xs={8} sm={5}>
+                    <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{marginTop:"7rem", display: message1 ? "" : "none"}}
+                            >
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={250} height={250}/>
+                        </ScrollAnimatable>
                 </Grid>
             </Grid>
 
@@ -217,8 +275,16 @@ const Timeline = ({ setObserver, callback }) => {
 
 
       <Grid container>
-            <Grid item xs={8} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-end",marginTop:"-6rem", paddingLeft:"4rem"}}>
-            <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={250} height={250}/>
+            <Grid item xs={8} sm={5}>
+            <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInLeft}
+                            transition={slideOnScroll}
+                            style={{display: message2 ? "flex" : "none", flexDirection:"column", alignItems:"flex-end",marginTop:"-6rem", paddingLeft:"4rem"}}
+                            >           
+                <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={250} height={250}/> 
+            </ScrollAnimatable>
                 </Grid>
             <Grid item xs={2} style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
                 <div className={styles.circleWrapper}>
@@ -228,13 +294,21 @@ const Timeline = ({ setObserver, callback }) => {
                 </div>
                 <div id="timeline2" ref={timeline2} className={styles.timelineN2} style={{height: downSm ? "650px" : "350px"}}/>
             </Grid>
-            <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-start", marginTop:downMd ? "-8rem" : "-5rem", paddingRight:"4rem"}} >
+            <Grid item xs={2} sm={5} >
+                <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{display: message2 ? "flex" : "none", flexDirection:"column", alignItems:"flex-start", marginTop:downMd ? "-8rem" : "-5rem", paddingRight:"4rem"}}
+                            >
             <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
                         </div>
                         <div style={{ color:"white",fontSize:"1.3rem", textAlign:"left"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
                         </div>
+                </ScrollAnimatable>
                     </Grid>
       </Grid>
 
@@ -245,13 +319,21 @@ const Timeline = ({ setObserver, callback }) => {
 
 
       <Grid container>
-      <Grid item xs={2} sm={5} sx={{display:"flex", flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "-8rem" : "-5rem"}} >
+      <Grid item xs={2} sm={5} >
+                    <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInLeft}
+                            transition={slideOnScroll}
+                            style={{display: message3 ? "flex" : "none", flexDirection:"column", alignItems:"flex-end", paddingLeft:"4rem", marginTop:downMd ? "-8rem" : "-5rem"}}
+                                                    >
                         <div style={{ color:"#CCD9F0", marginBottom:"1rem", fontSize:downMd ? "1.8rem" : "2.5rem", fontWeight:"600"}}>
                             Lorem Ipsum
                         </div>
                         <div style={{ color:"white",fontSize:"1.3rem", textAlign:"right"}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt
                         </div>
+                        </ScrollAnimatable>
                     </Grid>
             <Grid item xs={2} style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
                 <div className={styles.circleWrapper}>
@@ -261,8 +343,16 @@ const Timeline = ({ setObserver, callback }) => {
                 </div>
                 <div id="timeline3" ref={timeline3} className={styles.timelineN3} style={{height: downSm ? "500px" : "300px"}}/>
             </Grid>
-            <Grid item xs={8} sm={5} sx={{marginTop:"-6rem"}}>
+            <Grid item xs={8} sm={5}>
+            <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInRight}
+                            transition={slideOnScroll}
+                            style={{display: message3 ? "" : "none", marginTop:"-6rem"}}
+                            >
                         <Image alt="profile" src={"/images/ana3.png"} style={{borderRadius:"1000px", marginTop:"-0.6rem"}} width={250} height={250}/>
+                        </ScrollAnimatable>
                 </Grid>
       </Grid>
                 </>

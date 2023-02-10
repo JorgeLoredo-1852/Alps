@@ -66,6 +66,7 @@
   z-index: -10;
   position: absolute;
   width: 100%;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -457,6 +458,22 @@ top: 5.5rem;
 }
 
 .ana5{
+  margin-bottom:-1rem;
     -webkit-filter: drop-shadow(10px 0px 0px rgba(40, 33, 92, 0.5));
     filter: drop-shadow(10px 0px 0px rgba(40, 33, 92, 0.5));
 }
+
+.container1 {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior:auto;
+}
+
+.section3{
+  width:5px;
+  overflow-y: scroll;
+   scroll-snap-align: start;
+   position: relative;
+ 
+ }

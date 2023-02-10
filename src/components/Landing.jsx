@@ -12,6 +12,13 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState, useEffect } from 'react'
 
+import {
+  slideInBottom,
+  slideOnScroll,
+  slideInTop
+} from '@/components/Animations';
+import ScrollAnimatable from '@/components/Animation';
+
 const inter = Poppins({
   weight: '400',
   subsets: ['latin'],
@@ -42,8 +49,13 @@ export default function Landing() {
           {
 
             downMd ? <>
-            
+                        
             <div className={styles.titles} style={{width:"100%", justifyContent:"center", zIndex:"-20"}}>
+              <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
             <div className={styles.titleMain} style={{width:"100%", textAlign:"center", fontSize:"3.3rem", marginTop:"0rem"}}>Ana Loredo</div>
               <div className={styles.titleSecondary} style={{width:"100%", textAlign:"center", fontSize:"2rem"}}>Psicóloga</div>
             <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"25rem", marginTop:"-2rem"}}>
@@ -64,12 +76,18 @@ export default function Landing() {
                     <WhatsApp  className={styles.locationIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
                     <div className={styles.subtitle} style={{textAlign:"center", margin:"0", color:"#5364A7"}}>+52 81 8179 7145</div>                 
                   </div>   
-                </div>            
+                </div>            </ScrollAnimatable>
             </div>
             
             
             </> : <>
+            
             <div className={styles.titles}>
+              <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
               <div className={styles.titleMain}>Ana</div>
               <div className={styles.titleMain}>Loredo</div>
               <div className={styles.titleSecondary}>Psicóloga</div>
@@ -94,7 +112,7 @@ export default function Landing() {
                 </div>
 
               </div>
-
+              </ScrollAnimatable>
             </div>
 
             <div className={styles.hero}>
@@ -119,6 +137,11 @@ export default function Landing() {
             
   
             <div className={styles.info}>
+            <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
               <div style={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
                   <div className={styles.subtitle}>
                     Psicóloga
@@ -136,7 +159,7 @@ export default function Landing() {
                   </div>
 
                 </div>                
-              </div>
+              </div></ScrollAnimatable>
             </div>
             </>
           }

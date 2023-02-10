@@ -20,6 +20,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import ClearIcon from '@mui/icons-material/Clear';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {
+  slideInBottom,
+  slideOnScroll,
+} from '@/components/Animations';
+import ScrollAnimatable from '@/components/Animation';
+import { slideInLeft, slideInRight } from './Animations'
 
 const theme = createTheme({
     status: {
@@ -96,17 +102,28 @@ export default function Form() {
   return (
         <div style={{display:"flex", justifyContent:"center", width:"100%", height:"100%"}}>
         <Grid container sx={{position:"relative", height:"100%", maxWidth:"1200px", paddingTop:downMd ? "10rem" : "11rem"}} >
-            <Grid item xs={12} md={6} sx={{display:"flex", flexDirection:"column", padding:"1rem"}}>
+            <Grid item xs={12} md={6}>
+            <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}
+                            style={{display:"flex", flexDirection:"column", padding:"1rem"}}
+                        >
                 <div style={{fontSize:downMd ? "2.3rem" : "3.5rem", textAlign:downMd ? "center" : "", color:"#28215C", fontWeight:"800"}}>
                     Agenda una cita
                 </div>
                 <div style={{fontSize:downMd ? "1rem" : "1.2rem", color:"#5364A7", marginTop:downMd ? "0.8rem" : "1.4rem",textAlign:downMd ? "center" : "", marginRight:downMd ? "0rem" : "5rem", fontWeight:"400"}} className={inter.className}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo
-                </div>
+                </div></ScrollAnimatable>
             </Grid> 
             <Grid item xs={12} md={6} sx={{display:"flex", flexDirection:"column", padding:"1rem", paddingTop:downMd?"0":"1rem"}}>
 
-
+            <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
             <form autoComplete="off" ref={form} onSubmit={sendEmail} style={{display:"flex", flexDirection:"column"}}>
                         <Grid container sx={{padding:"1rem"}} rowSpacing={downMd ? 1 : 3} >
                             <Grid item xs={12}>
@@ -154,7 +171,7 @@ export default function Form() {
                         </Grid>
                     </form>     
 
-
+                    </ScrollAnimatable>
 
             </Grid>
 

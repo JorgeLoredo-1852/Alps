@@ -34,17 +34,16 @@ export default function Home() {
       <ThemeProvider theme={theme}>
       <main className={ styles.main}> 
         <div className={inter.className}>
-        <Box sx={{overflow:"hidden", width:"100vw", height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center"}}>
+          
+        <Box  sx={{overflow:"hidden", width:"100vw", height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center"}}>
           <Navbar/>          
           <div style={{display:"flex", justifyContent:"center", flex:1}}>
             <Landing/>
           </div>
         </Box>
-
         <Box sx={{height:"100vh", overflow:"hidden", backgroundColor:"#5364A7"}}>
           <Bio/>
         </Box>
-
         <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}}>
           <Terapy/>
         </Box>
