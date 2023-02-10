@@ -46,6 +46,7 @@ export default function Bio() {
     const downLg = useMediaQuery(themeM.breakpoints.down('lg'));
     const downMd = useMediaQuery(themeM.breakpoints.down('md'));
     const downSm = useMediaQuery(themeM.breakpoints.down('sm'));
+    const downXl = useMediaQuery(themeM.breakpoints.down('xl'));
 
     const onClickContact = () =>{
 
@@ -78,16 +79,16 @@ export default function Bio() {
                         </div>
                         <div style={{margin:"auto 0"}}>
                             <div className={inter.className} style={{fontSize:"3rem", fontWeight:"800", lineHeight:"1.2", color:"#CCD9F0"}}>Hola, soy</div>
-                            <div className={inter.className} style={{fontSize:"5.5rem", lineHeight:"1.2", fontWeight:"800", color:"#CCD9F0"}}>Ana Loredo</div>
+                            <div className={inter.className} style={{fontSize:"5.5rem", lineHeight:"1", fontWeight:"800", color:"#CCD9F0"}}>Ana Loredo</div>
                             <div style={{fontSize:"1.4rem", color:"white", marginTop:"1rem"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt. Nulla mollis finibus posuere. Sed vehicula neque rhoncus.</div>
-                            <div className={styles.formButton} onClick={onClickContact} style={{marginBottom:"4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"2rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
+                            <div className={styles.formButton} onClick={onClickContact} style={{marginBottom:"4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"1rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
                         </div>
                     </Grid>
                     <Grid item xs={5} sx={{height:"100%", display:"flex", justifyContent:"flex-start", alignItems:"flex-end", padding:"0 1rem"}}>
                         <Image
                             src="/images/ana5.png" // Route of the image file
-                            height={708} // Desired size with correct aspect ratio
-                            width={452} // Desired size with correct aspect ratio
+                            height={downXl ? 590: 708} // Desired size with correct aspect ratio
+                            width={downXl ? 377: 452} // Desired size with correct aspect ratio
                             alt="Ana Loredo"
                             className={styles.ana5}
                         />     
