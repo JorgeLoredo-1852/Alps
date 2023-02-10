@@ -117,21 +117,31 @@ export default function Landing() {
 
             <div className={styles.hero}>
               <div style={{paddingTop:"7rem"}}>
+              <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
                 <Image
                   src="/images/ana2.png" // Route of the image file
                   height={imgHeight} // Desired size with correct aspect ratio
                   width={imgWidth} // Desired size with correct aspect ratio
                   alt="Ana Loredo"
-                />                
+                />                </ScrollAnimatable>
               </div>
 
               <div style={{position:"absolute", bottom:"0rem", zIndex:"-20"}}>
+              <ScrollAnimatable
+                            initial='start'
+                            animate='end'
+                            animation={slideInBottom}
+                            transition={slideOnScroll}>
                 <Image
                   src="/images/triangle.png" // Route of the image file
                   height={300} // Desired size with correct aspect ratio
                   width={3000} // Desired size with correct aspect ratio
                   alt="Triangle"
-                />    
+                />    </ScrollAnimatable>
               </div>
             </div>
             

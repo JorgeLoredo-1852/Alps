@@ -2,6 +2,7 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import { useEffect, useState } from 'react' 
 
@@ -36,7 +37,7 @@ const theme = createTheme({
     },
   });
 
-export default function Navbar() {
+export default function Navbar({handlePageBio, handlePageTerapy, handlePageContact}) {
     const themeM = useTheme();
 
     const downLg = useMediaQuery(themeM.breakpoints.down('lg'));
@@ -81,9 +82,9 @@ showDrawer ?
                       <span className={styles.navigation__icon} >&nbsp;</span>
                   </label>
                   <div className={openMenu ?  styles.menuContainer : styles.hideMenu} style={{zIndex:"-5", position:"absolute", width:"100%",left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
-                        <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Sección</div>
-                        <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Sobre Mí</div>
-                        <div onClick={onClickkNavbar} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
+                        <div onClick={handlePageBio} style={{textAlign:"center"}} className={styles.menuItem}>Sobre Mí</div>
+                        <div onClick={handlePageTerapy} style={{textAlign:"center"}} className={styles.menuItem}>Sección</div>
+                        <div onClick={handlePageContact} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
                         <div style={{textAlign:"center", paddingBottom:"0"}} className={styles.menuItem}>
                           <Instagram className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
                           <WhatsApp className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
@@ -96,9 +97,9 @@ showDrawer ?
                 :
                 <>
                     <div className={styles.sections}>
-                        <p onClick={onClickkNavbar} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sección</p>
-                        <p onClick={onClickkNavbar} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sobre Mí</p>
-                        <p onClick={onClickkNavbar} className={styles.hoverUnderlineAnimation}>Contacto</p>
+                        <p onClick={handlePageBio} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sobre Mí</p>
+                        <p onClick={handlePageTerapy} style={{marginRight:downLg ? "2rem":"4rem"}} className={styles.hoverUnderlineAnimation}>Sección</p>
+                        <p onClick={handlePageContact} className={styles.hoverUnderlineAnimation}>Contacto</p>
                     </div>
                     <div className={styles.socials}>
                         <div className={styles.blob} style={{zIndex: -10 ,position:"absolute", width:"30rem", top:"-17rem", right:downLg ? "-9rem":"-6.5rem"}}>

@@ -22,6 +22,21 @@ const inter = Poppins({
 })
 
 export default function Home() {
+  const refListBio = useRef(null)
+  const refListTerapy = useRef(null)
+  const refListContact = useRef(null)
+
+  const handlePageBio = () => {
+    refListBio.current?.scrollIntoView({behavior: 'smooth'});
+}
+
+const handlePageTerapy = () => {
+  refListTerapy.current?.scrollIntoView({behavior: 'smooth'});
+}
+
+const handlePageContact = () => {
+  refListContact.current?.scrollIntoView({behavior: 'smooth'});
+}
 
   return (
     <>
@@ -36,18 +51,18 @@ export default function Home() {
         <div className={inter.className}>
           
         <Box  sx={{overflow:"hidden", width:"100vw", height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center"}}>
-          <Navbar/>          
+          <Navbar handlePageBio={handlePageBio} handlePageTerapy={handlePageTerapy} handlePageContact={handlePageContact}/>          
           <div style={{display:"flex", justifyContent:"center", flex:1}}>
             <Landing/>
           </div>
         </Box>
-        <Box sx={{height:"100vh", overflow:"hidden", backgroundColor:"#5364A7"}}>
+        <Box sx={{height:"100vh", overflow:"hidden", backgroundColor:"#5364A7"}} ref={refListBio}>
           <Bio/>
         </Box>
-        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}}>
+        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}} ref={refListTerapy}>
           <Terapy/>
         </Box>
-        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#CCD9F0"}}>
+        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#CCD9F0"}} ref={refListContact}>
           <Form/>
         </Box>
         </div>
