@@ -37,7 +37,7 @@ export default function Home() {
           
         <Box  sx={{overflow:"hidden", width:"100vw", height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center"}}>
           <Navbar/>          
-          <div style={{overflow:"hidden", display:"flex", justifyContent:"center", flex:1}}>
+          <div style={{display:"flex", justifyContent:"center", flex:1}}>
             <Landing/>
           </div>
         </Box>
