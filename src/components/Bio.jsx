@@ -59,7 +59,7 @@ export default function Bio({handlePageContact}) {
     }
 
     const onClickWhatsapp = () =>{
-      console.log("Clicked Whatsapp")
+        window.open('https://wa.link/5ghtzl', '_blank', 'noreferrer');
     }
 
     const onClickMail = () =>{
