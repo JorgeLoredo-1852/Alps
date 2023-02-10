@@ -54,9 +54,18 @@ export default function Bio({handlePageContact}) {
     const downSm = useMediaQuery(themeM.breakpoints.down('sm'));
     const downXl = useMediaQuery(themeM.breakpoints.down('xl'));
 
-    const onClickContact = () =>{
+    const onClickInsta = () => {
+        window.open('https://www.instagram.com/analizarte.mx/', '_blank', 'noreferrer');
+    }
 
-    } 
+    const onClickWhatsapp = () =>{
+      console.log("Clicked Whatsapp")
+    }
+
+    const onClickMail = () =>{
+      console.log("Mail")
+    }
+
 
     return(
 
@@ -79,13 +88,13 @@ export default function Bio({handlePageContact}) {
                                 className={styles.logo}
                             />
                             <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0.4rem" :""}} aria-label="Delete">
-                                <Instagram className={styles.customIcon} sx={{fontSize:45}}/>
+                                <Instagram onClick={onClickInsta} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0.4rem" :""}} aria-label="Delete">
-                                <WhatsApp className={styles.customIcon} sx={{fontSize:45}}/>
+                                <WhatsApp onClick={onClickWhatsapp} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} style={{marginRight:downSm ? "0" :""}} aria-label="Delete">
-                                <MailOutline className={styles.customIcon} sx={{fontSize:45}}/>
+                                <MailOutline onClick={onClickMail} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             
                         </div></ScrollAnimatable>

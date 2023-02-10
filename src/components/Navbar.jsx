@@ -55,8 +55,16 @@ export default function Navbar({handlePageBio, handlePageTerapy, handlePageConta
         }
     },[downMd])
       
-    const onClickkNavbar = () => {
+    const onClickInsta = () => {
+      window.open('https://www.instagram.com/analizarte.mx/', '_blank', 'noreferrer');
+    }
 
+    const onClickWhatsapp = () =>{
+      console.log("Clicked Whatsapp")
+    }
+
+    const onClickMail = () =>{
+      console.log("Mail")
     }
 
 
@@ -80,13 +88,13 @@ showDrawer ?
                       <span className={styles.navigation__icon} >&nbsp;</span>
                   </label></Box>
                   <div className={openMenu ?  styles.menuContainer : styles.hideMenu} style={{zIndex:"50",position:"absolute", width:"100%",left: "0", backgroundColor:"#CCD9F0", display:"flex", flexDirection:"column"}}>
-                        <div onClick={handlePageBio} style={{textAlign:"center"}} className={styles.menuItem}>Sobre Mí</div>
-                        <div onClick={handlePageTerapy} style={{textAlign:"center"}} className={styles.menuItem}>Sección</div>
-                        <div onClick={handlePageContact} style={{textAlign:"center"}} className={styles.menuItem}>Contacto</div>
+                        <div onClick={handlePageBio} style={{textAlign:"center", userSelect: "none"}} className={styles.menuItem}>Sobre Mí</div>
+                        <div onClick={handlePageTerapy} style={{textAlign:"center",userSelect: "none"}} className={styles.menuItem}>Sección</div>
+                        <div onClick={handlePageContact} style={{textAlign:"center",userSelect: "none"}} className={styles.menuItem}>Contacto</div>
                         <div style={{textAlign:"center", paddingBottom:"0"}} className={styles.menuItem}>
-                          <Instagram className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
-                          <WhatsApp className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
-                          <MailOutline className={styles.menuIcon} sx={{fontSize:30}}/>
+                          <Instagram onClick={onClickInsta} className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
+                          <WhatsApp onClick={onClickWhatsapp} className={styles.menuIcon} sx={{fontSize:30, marginRight:"0.7rem"}}/>
+                          <MailOutline onClick={onClickMail} className={styles.menuIcon} sx={{fontSize:30}}/>
 
                         </div>
                     </div>
@@ -114,13 +122,13 @@ showDrawer ?
                         </div>
                         <ThemeProvider theme={theme}>
                         <div className={styles.customHoverFocus} aria-label="Delete">
-                                <Instagram className={styles.customIcon} sx={{fontSize:45}}/>
+                                <Instagram onClick={onClickInsta} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} aria-label="Delete">
-                                <WhatsApp className={styles.customIcon} sx={{fontSize:45}}/>
+                                <WhatsApp onClick={onClickWhatsapp} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                             <div className={styles.customHoverFocus} aria-label="Delete">
-                                <MailOutline className={styles.customIcon} sx={{fontSize:45}}/>
+                                <MailOutline onClick={onClickMail} className={styles.customIcon} sx={{fontSize:45}}/>
                             </div>
                         </ThemeProvider>
                     </div></Box>
