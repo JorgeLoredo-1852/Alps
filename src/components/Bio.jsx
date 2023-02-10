@@ -57,8 +57,8 @@ export default function Bio() {
         <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}} >
             <div style={{maxWidth:"1280px",width:"100%", height:"100%"}}>
                 <Grid container style={{width:"100%", height:"100vh", padding:"3rem", paddingBottom:"0"}}>
-                    <Grid item xs={7} sx={{height:"100%", padding:"0 1rem", display:"flex", flexDirection:"column"}}>
-                        <div style={{display:"flex"}}>
+                    <Grid item xs={12} md={7} sx={{height:"100%", padding:downMd ? "0" : "0 1rem", display:"flex", flexDirection:"column"}}>
+                        <div style={{display:"flex", justifyContent:downMd ? "center":""}}>
                             <Image
                                 src="/images/logo.png" // Route of the image file
                                 height={75} // Desired size with correct aspect ratio
@@ -78,13 +78,15 @@ export default function Bio() {
                             
                         </div>
                         <div style={{margin:"auto 0"}}>
-                            <div className={inter.className} style={{fontSize:"3rem", fontWeight:"800", lineHeight:"1.2", color:"#CCD9F0"}}>Hola, soy</div>
-                            <div className={inter.className} style={{fontSize:"5.5rem", lineHeight:"1", fontWeight:"800", color:"#CCD9F0"}}>Ana Loredo</div>
-                            <div style={{fontSize:"1.4rem", color:"white", marginTop:"1rem"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt. Nulla mollis finibus posuere. Sed vehicula neque rhoncus.</div>
-                            <div className={styles.formButton} onClick={onClickContact} style={{marginBottom:"4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"1rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
+                            {downMd ? <></> : <div className={inter.className} style={{fontSize:"3rem", fontWeight:"800", lineHeight:"1.2", color:"#CCD9F0", textAlign:downMd ? "center":"", marginBottom: downMd ? "1rem": ""}}>Hola, soy</div>}
+                            <div className={inter.className} style={{fontSize:downMd ? "4.5rem" : "5.5rem", lineHeight:"1", fontWeight:"800", color:"#CCD9F0", textAlign:downMd ? "center":""}}>Ana Loredo</div>
+                            <div style={{fontSize:"1.4rem", color:"white", marginTop:"1rem", textAlign:downMd ? "justify":""}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo leo, interdum et aliquam sit amet, elementum eget sapien. Integer aliquet iaculis orci in tincidunt. Nulla mollis finibus posuere. Sed vehicula neque rhoncus.</div>
+                            <div style={{width:"100%", display:"flex", justifyContent:downMd ? "center":""}}>
+                                <div className={styles.formButton} onClick={onClickContact} style={{marginBottom:downMd ? "" : "4rem", width:"fit-content", textAlign:"left", cursor:"pointer", fontSize:"1.8rem", color:"#CCD9F0", marginTop:"1rem", borderBottom:"2px solid #CCD9F0"}}>Contactar</div>
+                            </div>
                         </div>
                     </Grid>
-                    <Grid item xs={5} sx={{height:"100%", display:"flex", justifyContent:"flex-start", alignItems:"flex-end", padding:"0 1rem"}}>
+                    {downMd ? <></> : <Grid item xs={0} md={5} sx={{height:"100%", display:"flex", justifyContent:"flex-start", alignItems:"flex-end", padding:"0 1rem"}}>
                         <Image
                             src="/images/ana5.png" // Route of the image file
                             height={downXl ? 590: 708} // Desired size with correct aspect ratio
@@ -92,7 +94,7 @@ export default function Bio() {
                             alt="Ana Loredo"
                             className={styles.ana5}
                         />     
-                    </Grid>
+                    </Grid>}
                 </Grid>
             </div>
         </div>

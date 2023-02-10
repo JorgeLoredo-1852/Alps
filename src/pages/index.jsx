@@ -45,7 +45,7 @@ export default function Home() {
           <Bio/>
         </Box>
 
-        <Box sx={{minHeight:"100vh", backgroundColor:"#5364A7"}}>
+        <Box sx={{minHeight:"100vh",overflow:"hidden", backgroundColor:"#5364A7"}}>
           <Terapy/>
         </Box>
         <Box sx={{minHeight:"100vh", backgroundColor:"#CCD9F0"}}>
